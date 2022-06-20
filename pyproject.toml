@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "hypermodern-python-test"
+version = "0.1.0"
+description = "Follow-along if hypermodern python project"
+license = "MIT"
+homepage = "https://github.com/john-ingles/hypermodern_python_test"
+repository = "https://github.com/john-ingles/hypermodern_python_test"
+keywords = ['hypermodern']
+authors = ["John Ingles <john.kenneth.ingles@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+click = "^8.1.3"
+requests = "^2.28.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+coverage = {extras = ["toml"], version = "^6.4.1"}
+pytest-cov = "^3.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+hypermodern-python-test = "hypermodern_python_test.console:main"
+
+# pyproject.toml
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.coverage.run]
+branch = true
+source = ["hypermodern_python_test"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 100
