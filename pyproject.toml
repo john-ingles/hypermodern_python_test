@@ -25,7 +25,6 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry.scripts]
 hypermodern-python-test = "hypermodern_python_test.console:main"
 
-# pyproject.toml
 [tool.coverage.paths]
 source = ["src", "*/site-packages"]
 
