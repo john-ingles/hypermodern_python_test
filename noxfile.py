@@ -12,14 +12,18 @@ locations = "src", "tests", "noxfile.py"
 @nox.session(python=["3.9"])
 def tests(session):
     args = session.posargs or ["--cov", "-m", "not e2e"]
-    session.run("poetry", "install", external=True)
+    session.run("poetry", "install", "--no-dev", external=True)
+    install_with_constraints(
+        session, "coverage[toml]", "pytest", "pytest-cov", "pytest-mock"
+    )
     session.run("pytest", *args)
 
 
 @nox.session(python=["3.9"])
 def lint(session):
     args = session.posargs or locations
-    session.install(
+    install_with_constraints(
+        session,
         "flake8",
         "flake8-bandit",
         "flake8-black",
@@ -32,7 +36,7 @@ def lint(session):
 @nox.session(python="3.9")
 def black(session):
     args = session.posargs or locations
-    session.install("black")
+    install_with_constraints(session, "black")
     session.run("black", *args)
 
 
@@ -48,7 +52,23 @@ def safety(session):
         f"--output={requirements.name}",
         external=True,
     )
-    session.install("safety")
+    install_with_constraints(session, "safety")
     session.run("safety", "check", f"--file={requirements.name}", "--full-report")
+    requirements.close()
+    os.remove(requirements.name)
+
+
+def install_with_constraints(session, *args, **kwargs):
+    requirements = tempfile.NamedTemporaryFile(mode="w", delete=False)
+    session.run(
+        "poetry",
+        "export",
+        "--dev",
+        "--format=requirements.txt",
+        "--without-hashes",
+        f"--output={requirements.name}",
+        external=True,
+    )
+    session.install(f"--constraint={requirements.name}", *args, **kwargs)
     requirements.close()
     os.remove(requirements.name)
