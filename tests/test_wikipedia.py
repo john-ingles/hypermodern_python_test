@@ -1,5 +1,6 @@
 from hypermodern_python_test import wikipedia
 
+
 def test_random_page_uses_given_language(mock_requests_get):
     wikipedia.random_page(language="de")
     args, _ = mock_requests_get.call_args

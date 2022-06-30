@@ -6,7 +6,6 @@ import click
 from . import __version__, wikipedia
 
 
-
 @click.command()
 @click.option(
     "--language",
@@ -16,7 +15,7 @@ from . import __version__, wikipedia
     metavar="LANG",
     show_default=True,
 )
-@click.version_option(version = __version__)
+@click.version_option(version=__version__)
 def main(language):
     """The hypermodern Python project."""
     data = wikipedia.random_page(language=language)

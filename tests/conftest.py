@@ -10,6 +10,7 @@ def mock_requests_get(mocker):
     }
     return mock
 
-#pytest configure hook for e2e mark in test_console.py
+
+# pytest configure hook for e2e mark in test_console.py
 def pytest_configure(config):
     config.addinivalue_line("markers", "e2e: mark as end-to-end test.")
