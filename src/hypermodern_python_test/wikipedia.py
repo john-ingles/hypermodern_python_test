@@ -1,5 +1,5 @@
-import requests
 import click
+import requests
 
 API_URL = "https://{language}.wikipedia.org/api/rest_v1/page/random/summary"
 

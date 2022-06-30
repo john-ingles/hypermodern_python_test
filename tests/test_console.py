@@ -2,7 +2,6 @@ import click.testing
 import pytest
 import requests
 
-
 from hypermodern_python_test import console
 
 
