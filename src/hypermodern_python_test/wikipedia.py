@@ -39,6 +39,12 @@ def random_page(language: str = "en") -> Page:
 
     Returns:
         Page: A page resource.
+
+    Example:
+        >>> from hypermodern_python_test import wikipedia
+        >>> page = wikipedia.random_page(language="en")
+        >>> bool(page.title)
+        True
     """
     url = API_URL.format(language=language)
 

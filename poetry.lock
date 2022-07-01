@@ -767,10 +767,28 @@ six = ">=1.9.0,<2"
 docs = ["proselint (>=0.10.2)", "sphinx (>=3)", "sphinx-argparse (>=0.2.5)", "sphinx-rtd-theme (>=0.4.3)", "towncrier (>=21.3)"]
 testing = ["coverage (>=4)", "coverage-enable-subprocess (>=1)", "flaky (>=3)", "pytest (>=4)", "pytest-env (>=0.6.2)", "pytest-freezegun (>=0.4.1)", "pytest-mock (>=2)", "pytest-randomly (>=1)", "pytest-timeout (>=1)", "packaging (>=20.0)"]
 
+[[package]]
+name = "xdoctest"
+version = "1.0.0"
+description = "A rewrite of the builtin doctest module"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+six = "*"
+
+[package.extras]
+all = ["ipython", "ipython", "pygments", "pygments", "attrs", "cmake", "codecov", "colorama", "debugpy", "ipykernel", "ipykernel", "jedi", "jinja2", "jupyter-client", "jupyter-client", "jupyter-core", "nbconvert", "ninja", "pybind11", "pytest-cov", "pytest-cov", "pytest-cov", "pytest-cov", "pytest", "pytest", "pytest", "pytest", "pytest", "pytest", "scikit-build", "six", "typing"]
+jupyter = ["ipython", "ipython", "attrs", "debugpy", "ipykernel", "ipykernel", "jedi", "jinja2", "jupyter-client", "jupyter-client", "jupyter-core", "nbconvert"]
+optional = ["ipython", "ipython", "pygments", "pygments", "attrs", "colorama", "debugpy", "ipykernel", "ipykernel", "jedi", "jinja2", "jupyter-client", "jupyter-client", "jupyter-core", "nbconvert"]
+colors = ["pygments", "pygments", "colorama"]
+tests = ["cmake", "codecov", "ninja", "pybind11", "pytest-cov", "pytest-cov", "pytest-cov", "pytest-cov", "pytest", "pytest", "pytest", "pytest", "pytest", "pytest", "scikit-build", "typing"]
+
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "bf7a0f8da288c083470bd1fa4a65c069f29bdca098dbc0fa4bc00f29b5feb5ca"
+content-hash = "c939cbba94e63b2cbf667cdca80127e148318501ecfeab82a0e3de7381a88e54"
 
 [metadata.files]
 argcomplete = [
@@ -1164,4 +1182,9 @@ urllib3 = [
 virtualenv = [
     {file = "virtualenv-20.15.1-py2.py3-none-any.whl", hash = "sha256:b30aefac647e86af6d82bfc944c556f8f1a9c90427b2fb4e3bfbf338cb82becf"},
     {file = "virtualenv-20.15.1.tar.gz", hash = "sha256:288171134a2ff3bfb1a2f54f119e77cd1b81c29fc1265a2356f3e8d14c7d58c4"},
+]
+xdoctest = [
+    {file = "xdoctest-1.0.0-py2-none-any.whl", hash = "sha256:0b0b5958e0ac0a28c5496f96b7f0adbeb0ea7e0c0a227de1ce3bc79ddb1a4f00"},
+    {file = "xdoctest-1.0.0-py3-none-any.whl", hash = "sha256:76f44dc74515ff4bdf3cc3e91a2e408cf5699cfa03367634efaadf138c7b132d"},
+    {file = "xdoctest-1.0.0.tar.gz", hash = "sha256:7ebba7e71457e6e7cf86c463699575e52b1c9cc32ee2ee5e72256d6cd3aaeb2d"},
 ]

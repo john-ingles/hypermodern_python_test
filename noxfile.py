@@ -88,6 +88,15 @@ def typeguard(session: Session) -> None:
     session.run("pytest", f"--typeguard-packages={package}", *args)
 
 
+@nox.session(python="3.9")
+def xdoctest(session: Session) -> None:
+    """Run examples with xdoctest."""
+    args = session.posargs or ["all"]
+    session.run("poetry", "install", "--no-dev", external=True)
+    install_with_constraints(session, "xdoctest")
+    session.run("python", "-m", "xdoctest", package, *args)
+
+
 def install_with_constraints(session: Session, *args: str, **kwargs: Any) -> None:
     """Install packages constrained by Poetry's lock file."""
     requirements = tempfile.NamedTemporaryFile(mode="w", delete=False)
