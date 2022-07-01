@@ -3,13 +3,13 @@ import tempfile
 
 import nox
 
-nox.options.sessions = "lint", "safety", "tests"
+nox.options.sessions = "lint", "safety", "mypy", "tests"
 
 
 locations = "src", "tests", "noxfile.py"
 
 
-@nox.session(python=["3.9"])
+@nox.session(python="3.9")
 def tests(session):
     args = session.posargs or ["--cov", "-m", "not e2e"]
     session.run("poetry", "install", "--no-dev", external=True)
@@ -19,7 +19,7 @@ def tests(session):
     session.run("pytest", *args)
 
 
-@nox.session(python=["3.9"])
+@nox.session(python="3.9")
 def lint(session):
     args = session.posargs or locations
     install_with_constraints(
@@ -56,6 +56,13 @@ def safety(session):
     session.run("safety", "check", f"--file={requirements.name}", "--full-report")
     requirements.close()
     os.remove(requirements.name)
+
+
+@nox.session(python="3.9")
+def mypy(session):
+    args = session.posargs or locations
+    install_with_constraints(session, "mypy")
+    session.run("mypy", *args)
 
 
 def install_with_constraints(session, *args, **kwargs):
