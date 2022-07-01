@@ -3,3 +3,4 @@ __pycache__
 .coverage
 .nox
 .pytest_cache
+.vscode
