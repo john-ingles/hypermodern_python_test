@@ -39,6 +39,7 @@ def lint(session: Session) -> None:
         "flake8-bugbear",
         "flake8-docstrings",
         "flake8-isort",
+        "darglint",
     )
     session.run("flake8", *args)
 

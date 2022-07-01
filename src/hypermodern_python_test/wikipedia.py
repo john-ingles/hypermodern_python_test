@@ -31,10 +31,10 @@ def random_page(language: str = "en") -> Page:
     Performs a GET request to the /page/random/summary endpoint.
 
     Args:
-        language (str, optional): The Wikipedia language edition. Defaults to "en".
+        language (str): The Wikipedia language edition. Defaults to "en".
 
     Raises:
-        click.ClickException: The HTTP request failed or the HTTP response
+        ClickException: The HTTP request failed or the HTTP response
             contained an invalid body.
 
     Returns:
