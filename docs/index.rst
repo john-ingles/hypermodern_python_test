@@ -2,10 +2,11 @@ The Hypermodern Python Project
 ==============================
 
 .. toctree::
-    :hidden:
-    :maxdepth: 1
+   :hidden:
+   :maxdepth: 1
 
-    license
+   license
+   reference
 
 The example project based on the
 `Hypermodern Python <https://medium.com/@cjolowicz/hypermodern-python-d44485d9d769>`_
