@@ -1,3 +1,4 @@
+"""Comman-line interface"""
 import textwrap
 
 import click
