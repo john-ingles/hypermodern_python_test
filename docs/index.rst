@@ -23,7 +23,7 @@ run this command in your terminal:
 
 .. code-block:: console
 
-   $ pip install hypermodern-python-test
+   $ pip install hypermodern-python-test-this-is-a-test
 
 
 Usage
@@ -33,7 +33,7 @@ Hypermodern Python's usage looks like:
 
 .. code-block:: console
 
-   $ hypermodern-python-test [OPTIONS]
+   $ hypermodern-python-test-this-is-a-test [OPTIONS]
 
 .. option:: -l <language>, --language <language>
 

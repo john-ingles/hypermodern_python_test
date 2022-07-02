@@ -12,7 +12,7 @@ nox.options.sessions = "lint", "safety", "mypy", "tests"
 locations = "src", "tests", "noxfile.py", "docs/conf.py"
 
 
-package = "hypermodern_python_test"
+package = "hypermodern_python_test_this_is_a_test"
 
 
 @nox.session(python="3.9")

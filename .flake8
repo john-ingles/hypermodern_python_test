@@ -5,11 +5,11 @@ ignore = ANN401,E203,E501,W503
 max-line-length = 80
 max-complexity = 10
 per-file-ignores =
-    src/hypermodern_python_test/console.py:F401
+    src/hypermodern_python_test_this_is_a_test/console.py:F401
     tests/*:S101
 
 #local imports
-application-import-names = hypermodern_python_test, tests
+application-import-names = hypermodern_python_test_this_is_a_test, tests
 
 #import style
 import-order-style = google

@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "hypermodern-python-test"
+name = "hypermodern_python_test_this_is_a_test"
 version = "0.1.0"
 description = "Follow-along if hypermodern python project"
 license = "MIT"
@@ -42,14 +42,14 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-hypermodern-python-test = "hypermodern_python_test.console:main"
+hypermodern_python_test_this_is_a_test = "hypermodern_python_test_this_is_a_test.console:main"
 
 [tool.coverage.paths]
 source = ["src", "*/site-packages"]
 
 [tool.coverage.run]
 branch = true
-source = ["hypermodern_python_test"]
+source = ["hypermodern_python_test_this_is_a_test"]
 
 [tool.coverage.report]
 show_missing = true

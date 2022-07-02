@@ -6,7 +6,7 @@ import pytest
 import requests
 from pytest_mock import MockerFixture
 
-from hypermodern_python_test import console
+from hypermodern_python_test_this_is_a_test import console
 
 
 @pytest.fixture
@@ -18,7 +18,7 @@ def runner() -> click.testing.CliRunner:
 @pytest.fixture
 def mock_wikipedia_random_page(mocker: MockerFixture) -> Mock:
     """Fixture for mocking wikipedia.random_page."""
-    return mocker.patch("hypermodern_python_test.wikipedia.random_page")
+    return mocker.patch("hypermodern_python_test_this_is_a_test.wikipedia.random_page")
 
 
 def test_main_succeeds(

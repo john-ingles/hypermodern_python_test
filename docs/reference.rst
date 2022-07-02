@@ -6,15 +6,15 @@ Reference
     :backlinks: none
 
 
-hypermodern_python_test.console
--------------------------------
+hypermodern_python_test_this_is_a_test.console
+----------------------------------------------
 
-.. automodule:: hypermodern_python_test.console
+.. automodule:: hypermodern_python_test_this_is_a_test.console
    :members:
 
 
-hypermodern_python_test.wikipedia
----------------------------------
+hypermodern-python-test-this-is-a-test.wikipedia
+------------------------------------------------
 
-.. automodule:: hypermodern_python_test.wikipedia
+.. automodule:: hypermodern_python_test_this_is_a_test.wikipedia
    :members:
