@@ -7,6 +7,7 @@ max-complexity = 10
 per-file-ignores =
     src/hypermodern_python_test_this_is_a_test/console.py:F401
     tests/*:S101
+    src/hypermodern_python_test_this_is_a_test/__init__.py:I001,I005
 
 #local imports
 application-import-names = hypermodern_python_test_this_is_a_test, tests
